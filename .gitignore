@@ -1,0 +1,13 @@
+node_modules
+vendor
+includes/.env
+.env
+.env.example
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode
+.idea

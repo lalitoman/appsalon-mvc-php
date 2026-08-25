@@ -1,0 +1,117 @@
+@use 'base/variables' as v;
+
+.formulario-reportes {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .campo {
+        margin-bottom: 0;
+    }
+    .boton {
+        margin: 0;
+        width: auto;
+    }
+}
+
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+
+    @media (min-width: v.$telefono) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.kpi {
+    background-color: v.$blanco;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+
+    .kpi-numero {
+        color: v.$azul;
+        font-weight: 900;
+        font-size: 2.6rem;
+        margin: 0;
+    }
+    .kpi-etiqueta {
+        color: v.$negro;
+        font-size: 1.4rem;
+        margin: 0.5rem 0 0 0;
+    }
+}
+
+.grafica-barras {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    height: 20rem;
+    background-color: v.$blanco;
+    border-radius: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
+    overflow-x: auto;
+    margin-bottom: 3rem;
+}
+
+.barra-dia {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 3rem;
+    flex: 1 0 auto;
+
+    .barra {
+        width: 100%;
+        min-height: 2px;
+        background-color: v.$azul;
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+    .barra-etiqueta {
+        color: v.$negro;
+        font-size: 1.1rem;
+        margin: 0.5rem 0 0 0;
+        white-space: nowrap;
+    }
+}
+
+.reportes-tablas {
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.reporte-tabla {
+    background-color: v.$blanco;
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow-x: auto;
+
+    h2 {
+        color: v.$negro;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            color: v.$negro;
+            border-bottom: 1px solid v.$gris;
+        }
+        th {
+            font-weight: 700;
+            color: v.$azul;
+        }
+    }
+}
